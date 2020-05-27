@@ -1,0 +1,117 @@
+/*FONTS*/
+@font-face {
+    font-family:'Virtuous-Slab';
+    src: local('Virtuous-Slab'), url('fonts/Virtuous-Slab.otf') format('woff');
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #F5EDE2;
+}
+
+
+/*nav-burger-menu-starts*/
+
+.burger-menu {
+    width: 40px;
+    cursor: pointer;
+}
+
+#wrapper {
+    margin: 1rem;}
+
+header {
+    display: flex;
+    justify-content: space-between;
+}
+
+nav a {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #F5EDE2;
+    margin-top: 1.9rem;
+    margin-bottom: 1.9rem;
+    transform: color 0.2s 0.1s;
+    font-family: 'Virtuous-Slab';
+
+}
+
+.pages {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-content: center;
+}
+
+.non-active-link {
+    pointer-events: none;
+   cursor: default;
+}
+
+nav a.categories-pages {
+    font-size:1rem;
+}
+
+nav a:hover {
+    border-top: 1px solid #F5EDE2;
+}
+
+
+nav a.active {
+    border-top: 1px solid #F5EDE2;
+}
+
+nav {
+    position: absolute;
+    right: -100vw;
+    background: #000;
+    width: 100vw;
+    height: 100vh;
+    padding: 4rem;
+    transition: transform 1s;
+}
+
+nav.open {
+    transform: translateX(-100vw);
+}
+
+.burger-menu rect {
+    transition: all 0.2s;
+    transform-origin: 50% 50%;
+}
+
+.open rect:nth-child(2) .open rect:nth-child(3) {
+    transition-delay: .1s;
+}
+
+rect:nth-child(2) rect:nth-child(3) {
+    transition-delay: 0s;
+}
+
+.open rect:first-child {
+    transform: translateY(30px);
+    opacity: 0;
+}
+
+.open rect:nth-child(2) {
+    transform: rotate(45deg);
+}
+
+.open rect:nth-child(3) {
+    transform: rotate(-45deg);
+}
+
+.open rect:last-child {
+    transform: translateY(-30px);
+    opacity: 0;
+}
+
+/*nav-burger-menu-ends*/
