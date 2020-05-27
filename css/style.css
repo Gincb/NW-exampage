@@ -9,11 +9,14 @@
     box-sizing: border-box;
 }
 
-body,
-html {
+body 
+{
     padding: 0;
     margin: 0;
-    background-color: #F5EDE2;
+    overflow-x: hidden;
+    background-image: url("../assets/images/Background.png");
+    background-size: cover;
+    font-family: 'Virtuous-Slab';
 }
 
 
@@ -62,13 +65,21 @@ nav a.categories-pages {
     font-size: 1rem;
 }
 
-nav a:hover {
+nav a.active {
     border-top: 1px solid #F5EDE2;
 }
 
+.link-highlight::before {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: beige;
+    transition: width 0.5s;
+}
 
-nav a.active {
-    border-top: 1px solid #F5EDE2;
+.link-highlight:hover::before {
+    width: 100%;
 }
 
 nav {
@@ -124,3 +135,200 @@ rect:nth-child(2) rect:nth-child(3) {
 }
 
 /*nav-burger-menu-ends*/
+
+.heading {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.title-paragraph {
+    padding: 2em 0;
+    font-size: 1em;
+}
+
+.helvetica {
+    font-style: italic;
+}
+
+/* Categories - Home page */
+
+.category-flex {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1.5em;
+}
+
+.category-image {
+    padding: 1em;
+}
+
+.category-image img {
+    height: 400px;
+    width: 250px;
+    object-fit: cover;
+}
+
+/* About - Home Page */
+
+.about {
+    padding: 2em;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: auto 80vw auto;
+    grid-template-rows: auto;
+    grid-gap: 0.5em;
+    grid-template-areas: ". about-image ."". about-paragraph .";
+}
+
+.about-img {
+    height: 50vh;
+    background-image: url("../assets/images/Niels-profile.jpeg");
+    background-size: cover;
+    grid-area: about-image;
+}
+
+.about-paragraph {
+    grid-area: about-paragraph;
+}
+
+/* Work */
+
+.title-grid {
+    display: grid;
+    grid-template-columns: auto 80vw auto;
+    grid-template-rows: auto;
+    grid-gap: 0.5em;
+}
+
+.work-items {
+    padding: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 1.5em;
+}
+
+.work-items .paint {
+    margin: 0 1em 1em 0;
+}
+
+.paint {
+    width: 600px;
+    height: 400px;
+    background-color: whitesmoke;
+}
+
+/* Work Painting/Drawing */
+.pd-grid {
+    grid-template-areas: ". title-pd ."". pd-paragraph .";
+}
+
+.pd-title {
+    grid-area: title-pd;
+}
+
+.pd-paragraph {
+    grid-area: pd-paragraph;
+}
+
+/* Work Sculpting */
+.s-grid {
+    grid-template-areas: ". title-s ."". s-paragraph .";
+}
+
+.s-title {
+    grid-area: title-s;
+}
+
+.s-paragraph {
+    grid-area: s-paragraph;
+}
+
+/* Work Filmmaking */
+.fm-grid {
+    grid-template-areas: ". title-fm ."". fm-paragraph .";
+}
+
+.fm-title {
+    grid-area: title-fm;
+}
+
+.fm-paragraph {
+    grid-area: fm-paragraph;
+}
+
+/* Work Radio Hosting */
+.rh-grid {
+    grid-template-areas: ". title-rh ."". rh-paragraph .";
+}
+
+.rh-title {
+    grid-area: title-rh;
+}
+
+.rh-paragraph {
+    grid-area: rh-paragraph;
+}
+
+@media only screen and (min-width: 768px) {
+    .title-heading {
+        width: 40vw;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 992px) {
+
+    /* About - Home Page */
+
+    .category-flex {
+        flex-wrap: nowrap;
+    }
+
+    .about-grid {
+        grid-template-columns: auto 30vw 50vw auto;
+        grid-template-rows: auto;
+        grid-gap: 5em;
+        grid-template-areas: ". about-image about-paragraph .";
+    }
+
+    .about-img {
+        height: 80vh;
+    }
+
+    .about-paragraph {
+        padding: 5em 5em 5em 0;
+    }
+
+    /* Work */
+    .title-grid {
+        display: grid;
+        grid-template-columns: auto 30vw 50vw auto;
+        grid-template-rows: auto;
+        grid-gap: 0.5em;
+    }
+
+    /* Work Painting/Drawing */
+    .pd-grid {
+        grid-template-areas: ". title-pd pd-paragraph .";
+    }
+
+    /* Work Sculpting */
+    .s-grid {
+        grid-template-areas: ". title-s s-paragraph .";
+    }
+
+    /* Work Filmmaking */
+    .fm-grid {
+        grid-template-areas: ". title-fm fm-paragraph .";
+    }
+
+    /* Work Radio Hosting */
+    .rh-grid {
+        grid-template-areas: ". title-rh rh-paragraph .";
+    }
+}
