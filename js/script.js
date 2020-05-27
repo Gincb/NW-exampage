@@ -12,4 +12,3 @@ function setUpBurgerNav() {
         nav.classList.toggle('open');
     })
 }
-
