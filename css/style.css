@@ -22,6 +22,7 @@ html {
 .burger-menu {
     width: 40px;
     cursor: pointer;
+
 }
 
 #wrapper {
@@ -71,9 +72,12 @@ nav a.active {
 }
 
 nav {
-    position: absolute;
+    /*position: absolute;*/
+    position: fixed;
+    top:0;
     right: -100vw;
     background: #000;
+    opacity: 0.7;
     width: 100vw;
     height: 100vh;
     padding: 4rem;
@@ -82,6 +86,10 @@ nav {
 
 nav.open {
     transform: translateX(-100vw);
+}
+.burger-menu.open {
+    fill: #F5EDE2;
+     z-index: 50;
 }
 
 .burger-menu rect {
