@@ -302,6 +302,12 @@ figure {
     display: none;
 }
 
+a.overlay-link {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
 @media only screen and (min-width: 768px) {
     .title-heading {
         width: 40vw;

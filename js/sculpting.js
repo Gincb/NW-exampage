@@ -3,9 +3,18 @@ window.addEventListener('DOMContentLoaded', getData);
 const linkS = "http://colorless.in/wordpress-portfolio/nw-exam-wordpress/wp-json/wp/v2/posts?categories=3&_embed";
 
 function getData() {
-    fetch(linkS)
+    const urlParams = new URLSearchParams(window.location.search);
+    const the_work_id = urlParams.get("work_id");
+
+    if(the_work_id) {
+        fetch("http://colorless.in/wordpress-portfolio/nw-exam-wordpress/wp-json/wp/v2/posts/" + the_work_id + "?_embed")
+        .then(res => res.json())
+        .then(showWorkS)
+    } else {
+        fetch(linkS)
         .then(res => res.json())
         .then(handleData)
+    }
 }
 
 function handleData(workS) {
@@ -23,6 +32,12 @@ function showWorkS(workS) {
     SCopy.querySelector(".work-s-year").textContent = workS.year;
 
     SCopy.querySelector(".work-s-img").src = workS._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+
+    const a = SCopy.querySelector(".overlay-link");
+
+    if (a) {
+        a.href += workS.id;
+    }
 
     document.querySelector(".work-items").appendChild(SCopy);
 
