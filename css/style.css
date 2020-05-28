@@ -206,10 +206,12 @@ rect:nth-child(2) rect:nth-child(3) {
 }
 
 .work-items {
-    padding: 1em;
+    max-width: 100vw;
+    padding: 1em 2em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
     padding-bottom: 1.5em;
 }
 
@@ -268,18 +270,18 @@ rect:nth-child(2) rect:nth-child(3) {
 /* Database content */
 
 .work-items article {
-    margin: 0 1em 1em 0;
+    margin: 1em 0;
 }
 
 .work-images {
-    width: 600px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
 .work-s-img { 
-    width: 450px;
-    height: 300px;
+    width: 300px;
+    height: 200px;
     object-fit: cover;
 }
 
@@ -293,42 +295,68 @@ figure {
 }
 
 .overlay {
-    position: absolute;
-    padding: 5em;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color: black;
+    display: none;
 }
 
 .img-text {
-    opacity: 0;
-    color: white;
-    text-align: center;
-    transition: .5s ease;
-}
-
-.img-title {
-    font-size: 2em;
-}
-
-.container:hover .overlay {
-    opacity: .8;
-}
-
-.container:hover .img-text {
-    opacity: 1;
+    display: none;
 }
 
 @media only screen and (min-width: 768px) {
     .title-heading {
         width: 40vw;
         text-align: center;
+    }
+
+    /* Database content */
+
+    .work-items article {
+        margin: 0 1em 1em 0;
+    }
+
+    .work-images {
+        width: 600px;
+        height: 300px;
+    }
+    
+    .work-s-img { 
+        width: 450px;
+        height: 300px;
+    }
+
+    .overlay {
+        display: block;
+        position: absolute;
+        padding: 5em;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 100%;
+        width: 100%;
+        opacity: 0;
+        transition: .5s ease;
+        background-color: black;
+    }
+    
+    .img-text {
+        display: block;
+        opacity: 0;
+        color: white;
+        text-align: center;
+        transition: .5s ease;
+    }
+    
+    .img-title {
+        font-size: 2em;
+    }
+
+    .container:hover .overlay {
+        opacity: .8;
+    }
+    
+    .container:hover .img-text {
+        opacity: 1;
     }
 }
 
@@ -382,4 +410,5 @@ figure {
     .rh-grid {
         grid-template-areas: ". title-rh rh-paragraph .";
     }
+
 }
