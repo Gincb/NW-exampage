@@ -19,7 +19,7 @@ function showWorkFM(workFM) {
     const FMTemplate = document.querySelector(".work-fm-template").content;
     const FMCopy = FMTemplate.cloneNode(true); // made copy
 
-    FMCopy.querySelector(".work-fm-model").textContent = workFM.title.rendered;
+    FMCopy.querySelector(".work-fm-title").textContent = workFM.title.rendered;
     FMCopy.querySelector(".work-fm-year").textContent = workFM.year;
 
     FMCopy.querySelector(".work-fm-img").src = workFM._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
