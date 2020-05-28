@@ -92,7 +92,7 @@ nav {
     width: 100vw;
     height: 100vh;
     padding: 4rem;
-    z-index: 100;
+    z-index: 49;
     transition: transform 1s;
 }
 
