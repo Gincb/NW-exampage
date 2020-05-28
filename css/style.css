@@ -212,16 +212,6 @@ rect:nth-child(2) rect:nth-child(3) {
     padding-bottom: 1.5em;
 }
 
-.work-items .paint {
-    margin: 0 1em 1em 0;
-}
-
-.paint {
-    width: 600px;
-    height: 400px;
-    background-color: whitesmoke;
-}
-
 /* Work Painting/Drawing */
 .pd-grid {
     grid-template-areas: ". title-pd ."". pd-paragraph .";
@@ -272,6 +262,60 @@ rect:nth-child(2) rect:nth-child(3) {
 
 .rh-paragraph {
     grid-area: rh-paragraph;
+}
+
+/* Database content */
+
+.work-items article {
+    margin: 0 1em 1em 0;
+}
+
+.work-images {
+    width: 40vw;
+    height: 50vh;
+    object-fit: cover;
+}
+
+.container {
+    position: relative;
+}
+
+figure {
+    padding: 0;
+    margin: 0;
+}
+
+.overlay {
+    position: absolute;
+    padding: 8em;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: black;
+}
+
+.img-text {
+    opacity: 0;
+    color: white;
+    text-align: center;
+    transition: .5s ease;
+}
+
+.img-title {
+    font-size: 2em;
+}
+
+.container:hover .overlay {
+    opacity: .8;
+}
+
+.container:hover .img-text {
+    opacity: 1;
 }
 
 @media only screen and (min-width: 768px) {
