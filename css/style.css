@@ -92,6 +92,7 @@ nav {
     width: 100vw;
     height: 100vh;
     padding: 4rem;
+    z-index: 100;
     transition: transform 1s;
 }
 
@@ -271,8 +272,14 @@ rect:nth-child(2) rect:nth-child(3) {
 }
 
 .work-images {
-    width: 40vw;
-    height: 50vh;
+    width: 600px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.work-s-img { 
+    width: 450px;
+    height: 300px;
     object-fit: cover;
 }
 
@@ -287,7 +294,7 @@ figure {
 
 .overlay {
     position: absolute;
-    padding: 8em;
+    padding: 5em;
     top: 0;
     bottom: 0;
     left: 0;
