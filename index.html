@@ -69,6 +69,35 @@
         </div>
     </div>
 
+    <div class="page-row">
+        <div class="contact-form">
+            <form action="/send" method="post">
+                <h2>Contact</h2>
+                <div class="inline-group">
+                    <label for="name">Name</label>
+                    <input type="text" name="name" id="name" class="form-input">
+                </div>
+                <div class="inline-group">
+                    <label for="email">Email</label>
+                    <input type="text" name="email" id="email" class="form-input">
+                </div>
+                <div class="inline-group">
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" id="subject" class="form-input">
+                </div>
+                <div class="inline-group">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" class="form-input"></textarea>                
+                </div>
+                <div class="form-buttons">
+                    <button type="submit">
+                        <img src="assets/images/send-icon.svg" width="32" alt="Send form" title="Send">
+                    </button>
+                </div>
+            </form>
+        </div>
+    </div>
+
     <footer><p class="heading">Niels Wamberg. All rights reserved - 2020</p></footer>
     <script src="js/script.js"></script>
 </body>
