@@ -162,12 +162,15 @@ rect:nth-child(2) rect:nth-child(3) {
 }
 
 .category-image {
-    padding: 1em;
+    height: 400px;
+    width: 250px;
+    padding: 0;
+    margin: 1em;
 }
 
 .category-image img {
-    height: 400px;
-    width: 250px;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
 }
 
@@ -188,7 +191,9 @@ rect:nth-child(2) rect:nth-child(3) {
 .about-img {
     height: 50vh;
     background-image: url("../assets/images/Niels-profile.jpeg");
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
     grid-area: about-image;
 }
 
@@ -499,7 +504,7 @@ a.overlay-link {
     .overlay {
         display: block;
         position: absolute;
-        padding: 5em;
+        padding: 5em 0;
         top: 0;
         bottom: 0;
         left: 0;
@@ -509,6 +514,10 @@ a.overlay-link {
         opacity: 0;
         transition: .5s ease;
         background-color: black;
+    }
+
+    .overlay-home {
+        padding: 7em 0;
     }
     
     .img-text {
