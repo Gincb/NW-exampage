@@ -31,7 +31,20 @@ function showWorkRH(workRH) {
     RHCopy.querySelector(".work-rh-title").textContent = workRH.title.rendered;
     RHCopy.querySelector(".work-rh-guest").textContent = workRH.guest;
 
-    RHCopy.querySelector(".work-rh-img").src = workRH._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    const image = RHCopy.querySelector(".work-rh-img");
+    if (image) {
+        image.src = workRH._embedded["wp:featuredmedia"][0].media_details.sizes.full.source_url;
+    }
+
+    const description = RHCopy.querySelector(".work-rh-description");
+    if (description) {
+        description.innerHTML = workRH.description;
+    }
+
+    const link = RHCopy.querySelector(".work-rh-link");
+    if (link) {
+        link.src = workRH.link;
+    }
 
     const a = RHCopy.querySelector(".overlay-link");
 

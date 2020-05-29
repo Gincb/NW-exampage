@@ -303,7 +303,7 @@ rect:nth-child(2) rect:nth-child(3) {
 }
 /* Work */
 
-.title-grid {
+.title-grid, .content-grids {
     display: grid;
     grid-template-columns: auto 80vw auto;
     grid-template-rows: auto;
@@ -437,6 +437,39 @@ a.overlay-link {
     display: block;
 }
 
+.content-grids {
+    grid-template-areas: ". content-image ." ". content-text .";
+    grid-gap: 2em;
+}
+
+.content-grids-fm {
+    grid-template-rows: 30vh 40vh;
+}
+
+.content-image {
+    grid-area: content-image;
+}
+
+.content-text {
+    grid-area: content-text;
+    padding: 0 2em;
+    white-space: pre-line;
+}
+
+.content-image-adjust, .content-trailer-adjust {
+    width: 100%;
+    height: 100%;
+}
+
+.content-ps-image-adjust {
+    width: 100%;
+    height: auto;
+}
+
+.work-rh-link {
+    grid-area: content-image;
+}
+
 @media only screen and (min-width: 768px) {
     .title-heading {
         width: 40vw;
@@ -451,6 +484,10 @@ a.overlay-link {
 
     .work-images {
         width: 600px;
+        height: 300px;
+    }
+
+    .overlay-figure {
         height: 300px;
     }
     
@@ -526,6 +563,15 @@ a.overlay-link {
         grid-gap: 0.5em;
     }
 
+    .content-grids {
+        grid-template-columns: auto 40vw 40vw auto;
+        grid-template-rows: auto;
+    }
+
+    .content-grids-fm {
+        grid-template-rows: 70vh;
+    }
+
     /* Work Painting/Drawing */
     .pd-grid {
         grid-template-areas: ". title-pd pd-paragraph .";
@@ -544,6 +590,22 @@ a.overlay-link {
     /* Work Radio Hosting */
     .rh-grid {
         grid-template-areas: ". title-rh rh-paragraph .";
+    }
+
+    /* Database content */
+
+    .content-grids {
+        grid-template-areas: ". content-text content-image .";
+    }
+
+    .content-image-adjust, .work-rh-link {
+        width: 100%;
+        height: 100%;
+    }
+
+    .content-trailer-adjust {
+        width: 100%;
+        height: 70%;
     }
 
 }

@@ -31,7 +31,20 @@ function showWorkFM(workFM) {
     FMCopy.querySelector(".work-fm-title").textContent = workFM.title.rendered;
     FMCopy.querySelector(".work-fm-year").textContent = workFM.year;
 
-    FMCopy.querySelector(".work-fm-img").src = workFM._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    const image = FMCopy.querySelector(".work-fm-img");
+    if (image) {
+        image.src = workFM._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
+    }
+
+    const trailer = FMCopy.querySelector(".work-fm-trailer");
+    if (trailer) {
+        trailer.src = workFM.link;
+    }
+
+    const description = FMCopy.querySelector(".work-fm-description");
+    if (description) {
+        description.innerHTML = workFM.description;
+    }
 
     const a = FMCopy.querySelector(".overlay-link");
 
