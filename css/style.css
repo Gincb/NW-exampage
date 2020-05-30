@@ -19,6 +19,8 @@ body
     font-family: 'Virtuous-Slab';
 }
 
+a { color: #000; }
+
 
 /*nav-burger-menu-starts*/
 
@@ -600,6 +602,31 @@ a.overlay-link {
     .rh-grid {
         grid-template-areas: ". title-rh rh-paragraph .";
     }
+    
+    /* Profile */
+    
+.video {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 2em;
+}
+
+.video-player {
+    width: 100%;
+    height: 200px;
+}
+
+@media screen and (min-width: 768px) {
+    .video-player {
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    .video {
+        width: 60%;
+    }
+}
 
     /* Database content */
 
@@ -616,5 +643,47 @@ a.overlay-link {
         width: 100%;
         height: 70%;
     }
+    
+    /* Two columns */
 
+@media screen and (min-width: 768px) {
+
+    .two-columns {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .two-columns div:first-child {
+        margin-right: 4em;
+    }
+
+}
+    /* Footer */
+
+footer {
+    margin-top: 4em;
+}
+
+footer p {
+    text-align: center;
+}
+
+.some ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.some ul li {
+    display: block;
+    margin: 0;
+    padding: 0;
+    margin-right: 0.5rem;
+}
+
+.some ul li:last-child {
+    margin-right: 0;
 }
