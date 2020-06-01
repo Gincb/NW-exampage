@@ -21,22 +21,25 @@ body
 
 a { color: #000; }
 
+.site-logo {
+    display: block;
+    width: 96px;
+    margin-left: calc(5vw + 16px);
+}
 
 /*nav-burger-menu-starts*/
 
 .burger-menu {
     width: 40px;
+    height: 40px;
     cursor: pointer;
-
-}
-
-#wrapper {
-    margin: 1rem;
+    margin: 12px 12px 0 0;
 }
 
 header {
     display: flex;
     justify-content: space-between;
+    align-content: flex-start;
 }
 
 nav a {
