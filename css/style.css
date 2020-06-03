@@ -605,6 +605,22 @@ a.overlay-link {
     .rh-grid {
         grid-template-areas: ". title-rh rh-paragraph .";
     }
+    /* Database content */
+    
+    .content-grids {
+        grid-template-areas: ". content-text content-image .";
+    }
+    
+    .content-image-adjust, .work-rh-link {
+        width: 100%;
+        height: 100%;
+    }
+    
+    .content-trailer-adjust {
+        width: 100%;
+        height: 70%;
+    }
+}
     
     /* Profile */
     
@@ -631,22 +647,7 @@ a.overlay-link {
     }
 }
 
-    /* Database content */
 
-    .content-grids {
-        grid-template-areas: ". content-text content-image .";
-    }
-
-    .content-image-adjust, .work-rh-link {
-        width: 100%;
-        height: 100%;
-    }
-
-    .content-trailer-adjust {
-        width: 100%;
-        height: 70%;
-    }
-    
     /* Two columns */
 
 @media screen and (min-width: 768px) {
