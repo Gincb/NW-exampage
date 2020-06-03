@@ -33,6 +33,11 @@ function showWorkPD(workPD) {
 
     PDCopy.querySelector(".work-pd-img").src = workPD._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
 
+    const method = PDCopy.querySelector(".work-pd-methods");
+    if (method) {
+        method.innerHTML = workPD.method;
+    }
+
     const a = PDCopy.querySelector(".overlay-link");
 
     if (a) {

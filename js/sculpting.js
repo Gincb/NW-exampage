@@ -33,6 +33,11 @@ function showWorkS(workS) {
 
     SCopy.querySelector(".work-s-img").src = workS._embedded["wp:featuredmedia"][0].media_details.sizes.medium_large.source_url;
 
+    const method = SCopy.querySelector(".work-s-methods");
+    if (method) {
+        method.innerHTML = workS.method;
+    }
+
     const a = SCopy.querySelector(".overlay-link");
 
     if (a) {
