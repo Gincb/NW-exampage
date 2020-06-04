@@ -49,9 +49,7 @@ nav a {
     color: #F5EDE2;
     margin-top: 1.9rem;
     margin-bottom: 1.9rem;
-    transform: color 0.2s 0.1s;
     font-family: 'Virtuous-Slab';
-
 }
 
 .pages {
@@ -62,7 +60,6 @@ nav a {
 }
 
 .non-active-link {
-    pointer-events: none;
     cursor: default;
 }
 
@@ -106,7 +103,7 @@ nav.open {
 }
 .burger-menu.open {
     fill: #F5EDE2;
-     z-index: 50;
+    z-index: 50;
 }
 
 .burger-menu rect {
@@ -648,7 +645,10 @@ a.overlay-link {
 }
 
 
-    /* Two columns */
+/* Two columns */
+.two-columns div img {
+    width: 100%;
+}
 
 @media screen and (min-width: 768px) {
 
